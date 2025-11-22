@@ -18,8 +18,8 @@ Follow these steps to set up the project locally:
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/StephenGrider/AlgoCasts.git
-    cd Data Structures & Algorithms
+    git clone https://github.com/N-Jadav/Data-Structures-Algorithms.git
+    cd Data-Structures-Algorithms
     ```
 
 2.  **Install dependencies:**
