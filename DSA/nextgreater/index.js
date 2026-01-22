@@ -1,0 +1,36 @@
+function nextGreaterElement1(arr) {
+  let n = arr.length;
+  let res = new Array(n).fill(-1);
+
+  for (let i = 0; i < n; i++) {
+    for (let j = i + 1; j < n; j++) {
+      if (arr[j] > arr[i]) {
+        res[i] = arr[j];
+        break;
+      }
+    }
+  }
+
+  return res;
+}
+
+function nextGreaterElement(arr) {
+  let n = arr.length;
+  let res = new Array(n).fill(-1);
+  let stack = [];
+
+  for (let i = n - 1; i >= 0; i--) {
+    while (stack.length > 0 && stack[stack.length - 1] <= arr[i]) {
+      stack.pop();
+    }
+
+    if (stack.length > 0) {
+      res[i] = stack[stack.length - 1];
+    }
+
+    stack.push(arr[i]);
+  }
+  return res;
+}
+
+module.exports = nextGreaterElement;
